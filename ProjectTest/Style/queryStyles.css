@@ -1,0 +1,451 @@
+@media screen and (max-width: 768px) {
+  :root {
+    --base-color: #383544;
+    --text-color: #cbd5e1;
+    --primary-color: #8576ff;
+    --primary-dark-color: #484554;
+    --select-color: #cbd5e1;
+    --secondary-dark-color: #6a6676;
+    --confirm-color: rgb(32, 168, 32);
+    --confirm-color2: rgb(140, 241, 140);
+    --inProgress-color: #2563eb;
+    --inProgress-color2: rgb(109, 150, 238);
+    --thead-color: var(--secondary-dark-color);
+    --eventBorder: var(--primary-dark-color);
+    --arrowBut-color: var(--primary-dark-color);
+    --notify-color: var(--text-color);
+    --image-color: #ffffff;
+    --eventhistory: #cbd5e1;
+    --nameEvent-color: #484554;
+  }
+
+  .darkmode {
+    --base-color: #ffffff;
+    --text-color: #334155;
+    --primary-color: #fcf7ff;
+    --primary-dark-color: #ffffff;
+    --select-color: #cbd5e1;
+    --secondary-dark-color: #6a6676;
+    --confirm-color: rgb(32, 168, 32);
+    --inProgress-color: #2563eb;
+    --border-color: #f2f2f7;
+    --sidebarBorder-color: #f1f5f9;
+    --thead-color: #f1f5f9;
+    --eventBorder: #e2e8f0;
+    --arrowBut-color: #e2e8f0;
+    --notify-color: rgb(208, 219, 221);
+    --boxshadow-color: rgba(0, 0, 0, 0.75);
+    --eventWrap-color: rgb(14, 12, 12);
+    --image-color: #ffffff;
+    --eventhistory: rgb(14, 12, 12);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #cbd5e1;
+  }
+
+  .sideBarLogoWrap {
+    padding-top: 5px;
+  }
+
+  .SideBarLogoQuery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb;
+    background-color: #57a1f5;
+    padding-block: 10px;
+    width: 120px;
+    margin-left: 10px;
+  }
+
+  .sideBarHeader {
+    width: 100%;
+    height: 11vh;
+    background-color: var(--base-color);
+    box-shadow: 1px 1px 5px 0px var(--boxshadow-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-color);
+  }
+
+  .SideBar {
+    /* max-width: 100%; */
+    width: 100%;
+    position: absolute;
+    left: -750px;
+    transition: width 0.3s;
+    /* margin: 10px; */
+  }
+
+  .BarMenu .sideBarMenu {
+    height: 190vh;
+
+  }
+
+  .sideBarMenu li a .text {
+    color: var(--eventhistory);
+  }
+  
+  .userSidebar .userNorms span {
+    color: var(--eventhistory);
+  }
+
+  .SideBar.active {
+    left: 0;
+  }
+
+  .sideBarLogoWrap .CloseSideBar {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    color: var(--eventhistory);
+    border: 1px solid var(--eventBorder);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mainContent {
+    flex-grow: 1;
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainContent .summaryPart {
+    height: 95vh;
+  }
+
+  .mainContent .summaryPart h1 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: var(--eventWrap-color);
+  }
+
+  .mainContent .summaryPart .totalSummary {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mainContent .summaryPart .totalSummary .totalEvents {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .totalSummary .totalEvents .totalEventsWrap {
+    font-size: 20px;
+    color: var(--eventWrap-color);
+  }
+
+  .totalSummary .totalEvents .totalEventsWrapCalc {
+    font-size: 20px;
+  }
+
+  .totalSummary .totalEvents .totalEventsWrapCalc p span {
+    font-size: 15px;
+  }
+
+  .chartCarousel {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chartCarousel h3 {
+    color: var(--eventWrap-color);
+  }
+
+  .chartCarouselWrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .chartCarousel .barChart,
+  .chartCarousel .carousel {
+    width: 100%;
+    height: 50%;
+  }
+
+  .chartCarousel .carousel .carousel-item p {
+    color: var(--image-color);
+  }
+
+  .eventsHistory {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .eventsHistory h3 {
+    color: var(--eventhistory);
+  }
+
+  .eventsHistoryWrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .historySearch {
+    width: 100%;
+    height: 10vh;
+  }
+
+  .historySearch input {
+    height: 100%;
+    padding-block: 10px;
+    font-size: 15px;
+    border: 1px solid var(--eventBorder);
+  }
+
+  .search-icon {
+    top: 284%;
+    left: 7%;
+    font-weight: 100;
+  }
+
+  .historySelect {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .historySelect .select {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .historySelect .select button {
+    color: var(--text-color);
+  }
+
+  .downArrow {
+    font-size: 10px;
+  }
+
+  .search p {
+    width: 100%;
+    height: 20%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+  }
+  
+  .sort {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    gap: 74.5%;
+  }
+  .sort .vertical-dots, .sort label {
+    color: var(--text-color);
+  }
+  
+  .sort .export {
+    margin-left: 10px;
+    color: var(--text-color);
+  }
+  
+  .sort select {
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+
+  .eventName {
+    width: 100%;
+    display: flex;
+    background-color: var(--primary-dark-color);
+  }
+
+  table {
+    width: 100%;
+    border-spacing: none;
+    /* background-color: purple; */
+  }
+
+  table th {
+    width: 100%;
+  }
+
+  .Statuses {
+    display: none;
+  }
+
+  .event-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: var(--primary-dark-color);
+  }
+
+  table .toggleEventName {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  table .toggleEventStatus {
+    border-radius: 15px;
+    display: flex;
+    font-size: 15px;
+  }
+
+  .toggleEventStatus.confirmed {
+    background-color: rgb(32, 168, 32);
+    color: white;
+  }
+
+  .toggleEventStatus.in-progress {
+    background-color: #2563eb;
+    color: white;
+  }
+
+  .dot {
+    display: none;
+  }
+
+  .Eventname {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Eventname span {
+    color: var(--text-color);
+  }
+  
+  .sta {
+    display: flex;
+  }
+  
+  .toggleEventName {
+    color: var(--text-color);
+  }
+  
+  .toggleEventName .nameEvent, .toggleEventName .arrowToggle {
+    color: var(--text-color);
+  }
+
+  table tr .DS,
+  table tr .DN {
+    display: none;
+  }
+
+  table td span {
+    display: block;
+  }
+
+  table tr .DS,
+  table tbody tr .DN {
+    display: none;
+  }
+
+  .extra-details {
+    display: none;
+  }
+  
+  .details-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-dark-color);
+    border-bottom: 1px solid white;
+    padding: 10px;
+  }
+
+  .details-container span {
+    color: var(--text-color);
+  }
+
+  .arrowToggle {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .event-row.active .arrowToggle {
+    transform: rotate(90deg);
+  }
+  
+  .event-row.active + .extra-details {
+    display: flex;
+    background-color: var(--primary-dark-color);
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+  }
+
+  .moreOption {
+    height: 100%;
+    /* padding: 20px; */
+    width: 100%;
+    margin-bottom: 10vh;
+  }
+
+  .moreOption .nextMove {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    width: 70%;
+  }
+
+  .moreOption .nextMove .but {
+    height: 7.5vh;
+    padding-inline: 20px;
+    background-color: var(--arrowBut-color);
+    color: var(--text-color);
+  }
+
+  .displayRow {
+    width: 40%;
+  }
+
+  .displayRow label {
+    display: none;
+  }
+
+  .displayRow select {
+    width: 100%;
+    height: 8vh;
+  }
+
+  .displayRow select option {
+    color: var(--eventhistory);
+  }
+}

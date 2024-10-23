@@ -1,0 +1,658 @@
+:root {
+  --base-color: #383544;
+  --text-color: #CBD5E1;
+  --primary-color: #8576FF;
+  --primary-dark-color: #484554;
+  --select-color: #CBD5E1;
+  --secondary-dark-color: #6A6676;
+  --confirm-color: rgb(32, 168, 32);
+  --confirm-color2: none;
+  --inProgress-color: #2563eb;
+  --inProgress-color2:none;
+  --thead-color:var(--secondary-dark-color);
+  --eventBorder: #484554;
+  --arrowBut-color:var(--primary-dark-color);
+  --notify-color:var(--text-color);
+  --image-color: #FFFFFF;
+  --eventhistory: #cbd5e1;
+  --eventBackground: #484554;
+  --rowColor: none;
+}
+
+.darkmode {
+  --rowColor: #484554;
+  --base-color: #FFFFFF;
+  --text-color: #334155;
+  --primary-color: #FCF7FF;
+  --primary-dark-color: #FFFFFF;
+  --select-color: #CBD5E1;
+  --secondary-dark-color: #6A6676;
+  --confirm-color: rgb(32, 168, 32);
+  --confirm-color2: rgb(140, 241, 140);
+  --inProgress-color: #2563eb;
+  --inProgress-color2: rgb(109, 150, 238);
+  --border-color: #F2F2F7;
+  --sidebarBorder-color: #F1F5F9;
+  --thead-color: #F1F5F9;
+  --eventBorder: #E2E8F0;
+  --arrowBut-color: #E2E8F0;
+  --notify-color: rgb(208, 219, 221);
+  --boxshadow-color: rgba(0,0,0,0.75);
+  --eventWrap-color: rgb(14, 12, 12);
+  --image-color: #FFFFFF;
+  --eventhistory: rgb(14, 12, 12);
+  --eventBackground: #E2E8F0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+.SideBar {
+  width: 250px;
+  background-color: var(--primary-dark-color);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  transition: width 0.3s ease;
+}
+
+.SideBar.collapsed {
+  width: 80px; 
+}
+
+.sideBarMenu .text {
+  display: inline-block;
+  transition: display 0.3s ease;
+}
+
+.sideBarLogoWrap {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.sideBarLogoWrap .CloseSideBar {
+  display: none;
+}
+
+.SideBarLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  background-color: #57a1f5;
+  width: 120px;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.BarMenu {
+  background-color: var(--base-color);
+  height: 200vh;
+}
+
+.sideBarMenu {
+  flex-grow: 1;
+  list-style: none;
+  padding: 10px;
+  background-color: var(--primary-dark-color);
+  border: 1px solid var(--sidebarBorder-color);
+}
+
+.sideBarMenu li {
+  margin-bottom: 10px;
+}
+
+.sideBarMenu li:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.sideBarMenu li a,
+.sideBarMenu li div {
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sideBarMenu li .userSidebar .userIcon,
+.sideBarMenu li .userSidebar .icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.sideBarMenu li .userSidebar {
+  width: 100%;
+  background-color: var(--primary-dark-color);
+}
+
+
+.userSidebar {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  gap: 10px;
+}
+
+.userIcon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--select-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userIcon .usericons {
+  width: 100%;
+  height: 100%;
+  color: rgb(225, 225, 225);
+  font-size: 30px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.userNorms {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  text-align: left;
+}
+
+.userNorms span {
+  font-size: smaller;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: var(--base-color);
+  overflow: auto;
+  transition: margin-left 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.SideBarLogoQuery {
+  display: none;
+}
+
+.summaryPart {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.totalSummary {
+  display: flex;
+  gap: 10px;
+  width: 94%;
+}
+
+.totalSummary .totalEvents {
+  width: 25%;
+  height: 100%;
+  background-color: var(--primary-dark-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.totalSummary .totalEvents .totalEventsWrap .fa-exclamation-circle {
+  color: rgb(208, 219, 221);
+}
+
+.totalSummary .totalEvents .totalEventsWrapCalc {
+  /* background-color: pink; */
+  display: flex;
+  gap: 10px;
+}
+
+.totalSummary .totalEvents .totalEventsWrapCalc p span {
+  color: green;
+  font-size: 10px;
+}
+
+.totalSummary .totalEvents .totalEventsWrapCalcs p {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 10px;
+}
+
+.totalSummary .totalEvents .totalEventsWrapCalc p {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  font-size: 10px;
+}
+
+.chartCarousel {
+  width: 100%;
+  height: 60vh;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+
+.chartCarouselWrap {
+  display: flex;
+  width: 94%;
+  height: 100%;
+  gap: 10px;
+}
+
+.chartCarousel .barChart {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* height: 400px;  */
+  /* margin: 20px auto;  */
+  padding: 30px; /* Add padding inside the container */
+  background-color: var(--primary-dark-color); /* Optional background color for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chartCarousel .barChart canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.chartCarousel .carousel {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+}
+
+.chartCarousel .carousel .carouselImage {
+  border-radius: 10px;
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.chartCarousel .carousel .carouselImage > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carousel-item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.carousel-item p {
+  position: absolute;
+  top: 75%;
+  width: 93%;
+  margin-left: 20px;
+  color: var(--image-color);
+}
+
+.carousel-item img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-item[data-active] {
+  opacity: 1;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  top: 45%;
+  transform: translate(50%);
+  color: rgba(225, 225, 225, 0.8);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:focus {
+  outline: 5px solid black;
+}
+
+.carousel-button.next {
+  right: 2rem;
+}
+
+.eventsHistory {
+  height: 120vh;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.eventsHistoryWrap {
+  background-color: var(--primary-dark-color);
+  display: flex;
+}
+
+.search {
+  width: 65%;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.historySearch {
+  height: 100%;
+  width: 30%;
+}
+
+.historySearch input {
+  width: 100%;
+  height: 100%;
+  border:1px solid var(--eventBorder);
+  background-color: var(--eventBackground);
+  position: relative;
+  font-size: 18px;
+  padding-left: 50px;
+  outline: none;
+}
+
+.historySelect {
+  /* width: 40%; */
+  height: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+.historySelect .select {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: var(--eventBackground);
+  border:1px solid var(--eventBorder);
+  font-size: 14px;
+}
+
+.historySelect .select button {
+  border: none;
+  background-color: var(--eventBorder);
+}
+
+.sort select {
+  padding: 10px;
+  background-color: var(--eventBorder);
+  border: none;
+}
+
+.downArrow {
+  font-size: 10px;
+}
+
+.search-icon {
+  font-size: 18px; /* Set the icon color */
+  margin-right: 10px; /* Add space to the right if needed */
+  vertical-align: middle;
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  left: 21%;
+}
+
+.search span {
+  width: 30%;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort .dots {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--eventBorder);
+  border: none;
+}
+
+.vertical-dots {
+  font-size: 24px;
+  padding-inline: 12px;
+  padding-block: 4px;
+  cursor: pointer;
+  background-color: var(--eventBorder);
+  border: none;
+}
+
+.sort .export {
+  cursor: pointer;
+  background-color: var(--eventBorder);
+  border: none;
+  padding-inline: 10px;
+  padding-block: 5.5px;
+}
+
+.eventName {
+  width: 94.6%;
+  /* padding: 20px; */
+  background-color: var(--primary-dark-color);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 7px; /* Collapse borders to avoid extra spacing */
+}
+
+.eventName table thead .TR {
+  background-color: var(--primary-dark-color);
+}
+
+thead th {
+  padding: 8px;
+}
+
+tbody td {
+  padding: 8px;
+}
+
+table th,
+table td {
+  padding: 8px;
+  text-align: left;
+}
+
+table td span {
+  display: none;
+}
+
+table th {
+  background-color: var(--thead-color);
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--primary-dark-color);
+}
+
+tbody tr:hover {
+  background-color: var(--primary-dark-color);
+}
+
+table .toggleEventStatus {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  width: 120px;
+  justify-content: space-around;
+  gap: 3px;
+}
+
+.dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+}
+
+.toggleEventStatus.confirmed {
+  border: 1px solid var(--confirm-color);
+  color: var(--confirm-color);
+  background-color: var(--confirm-color2);
+}
+
+.toggleEventStatus.confirmed .dot {
+  background-color: var(--confirm-color);
+}
+
+.toggleEventStatus.in-progress {
+  border: 1px solid var(--inProgress-color);
+  color: var(--inProgress-color);
+  background-color: var(--inProgress-color2);
+}
+
+.toggleEventStatus.in-progress .dot {
+  background-color: var(--inProgress-color);
+}
+
+.extra-details {
+  display: none;
+}
+
+.event-row1 {
+  display: none;
+}
+
+.sta {
+  display: none;
+}
+
+.moreOption {
+  width: 94.6%;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.moreOption .nextMove {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moreOption .displayRow {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.moreOption .nextMove .but {
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding-inline: 20px;
+  background-color: var(--arrowBut-color);
+  color: var(--text-color);
+}
+
+.numberCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numberCircle:hover {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #8576FF;
+  color: var(--border-color);
+}
+
+.displayRow select {
+  /* width: 100%; */
+  height: 100%;
+  border: none;
+  background-color: var(--rowColor);
+  border: 1px solid var(--eventBorder);
+}
+
+.displayRow select option {
+  padding: 10px;
+}

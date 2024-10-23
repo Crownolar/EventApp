@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./ProjectTest/Style/styles.css" />
+    <link rel="stylesheet" href="./ProjectTest/Style/queryStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <div class="SideBar">
+        <div class="sideBarLogoWrap">
+          <div class="SideBarLogo">
+            <span>Full Logo</span>
+          </div>
+          <span class="CloseSideBar">X</span>
+        </div>
+        <div class="BarMenu">
+          <ul class="sideBarMenu">
+            <li>
+              <a id="home-link">
+                <i class="fas fa-home"></i>
+                <span class="text">Home</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i class="fas fa-calendar-alt"></i>
+                <span class="text">Events</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i class="fas fa-microphone"></i>
+                <span class="text">Speakers</span>
+              </a>
+            </li>
+            <li class="light-mode">
+              <a>
+                <i class="fas fa-file-alt"></i>
+                <span class="text">Reports</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i class="fas fa-bell"></i>
+                <span class="text">Notifications</span>
+              </a>
+            </li>
+            <li class="light-mode">
+              <a>
+                <i class="fas fa-envelope"></i>
+                <span class="text">Messages</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i class="fas fa-cog"></i>
+                <span class="text">Settings</span>
+              </a>
+            </li>
+            <li>
+              <a id="collapseBtn">
+                <i class="fas fa-chevron-left"></i>
+                <span class="text">Collapse</span>
+              </a>
+            </li>
+            <li id="theme-switch">
+              <a class="dark">
+                <i class="fas fa-adjust"></i>
+                <span class="text">Dark Mode</span>
+              </a>
+            </li>
+            <div>
+              <div class="userSidebar">
+                <div class="userIcon">
+                  <i class="fas fa-user usericons"></i>
+                </div>
+                <div class="userNorms">
+                  <span class="text">Rudra Devi</span>
+                  <span class="text">rudra.devi@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="mainContent light-mode" id="mainContent">
+        <div class="sideBarHeader">
+          <div class="SideBarLogoQuery">
+            <span>Full Logo</span>
+          </div>
+          <span class="hamburgerMenu">&#9776;</span>
+        </div>
+        <div class="summaryPart">
+          <h1>Welcome! here's your summary</h1>
+          <div class="totalSummary">
+            <div class="totalEvents">
+              <div class="totalEventsWrap">
+                <span>Total Events </span>
+                <i class="fas fa-exclamation-circle"></i>
+              </div>
+              <div class="totalEventsWrapCalc">
+                <span>100,000</span>
+                <p>
+                  <i class="fa-light fa-arrow-down-right"></i>
+                  <span>+5.0%</span>
+                </p>
+              </div>
+            </div>
+            <div class="totalEvents light-mode">
+              <div class="totalEventsWrap">
+                <span>Active Speakers </span>
+                <i class="fas fa-exclamation-circle"></i>
+              </div>
+              <div class="totalEventsWrapCalc">
+                <span>25</span>
+                <p>
+                  <i class="fas fa-arrow-down-right"></i>
+                  <span>+5.0%</span>
+                </p>
+              </div>
+            </div>
+            <div class="totalEvents">
+              <div class="totalEventsWrap">
+                <span>Total Registrations</span>
+                <i class="fas fa-exclamation-circle"></i>
+              </div>
+              <div class="totalEventsWrapCalc">
+                <span>300</span>
+                <p>
+                  <!-- <i class="fas fa-arrow-up-right"></i> -->
+                  <span>(//)</span>
+                  <span>+5.0%</span>
+                </p>
+              </div>
+            </div>
+            <div class="totalEvents">
+              <div class="totalEventsWrap">
+                <span>Total Revenue </span>
+                <i class="fas fa-exclamation-circle"></i>
+              </div>
+              <div class="totalEventsWrapCalc">
+                <span>$500,000</span>
+                <p>
+                  <span><i class="fas fa-arrow-up-right"></i></span>
+                  <span>+5.0%</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chartCarousel">
+          <h3>Event Registrations per month</h3>
+          <div class="chartCarouselWrap">
+            <div class="barChart">
+              <canvas id="eventChart"></canvas>
+            </div>
+            <div class="carousel">
+              <div class="carouselImage" data-carousel>
+                <!-- <div class="navBtn"> -->
+                <button
+                  class="carousel-button prev"
+                  data-carousel-button="prev"
+                >
+                  ❮
+                </button>
+                <button
+                  class="carousel-button next"
+                  data-carousel-button="next"
+                >
+                  ❯
+                </button>
+                <!-- </div> -->
+                <ul data-slides>
+                  <li class="carousel-item">
+                    <img src="./ProjectTest/Image/unsplash1.jpg" alt="a image 1" />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Enim laborum deserunt iste fugit praesentium nemo ad
+                      quidem suscipit maxime est harum, cupiditate debitis vero
+                      officiis illo, architecto quia molestiae aliquam?
+                    </p>
+                  </li>
+                  <li class="carousel-item" data-active>
+                    <img src="./ProjectTest/Image/unsplash2.jpg" alt="a image 2" />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Enim laborum deserunt iste fugit praesentium nemo ad
+                      quidem suscipit maxime est harum, cupiditate debitis vero
+                      officiis illo, architecto quia molestiae aliquam?sss
+                    </p>
+                  </li>
+                  <li class="carousel-item">
+                    <img src="./ProjectTest/Image/unsplash3.jpg" alt="a image 3" />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Enim laborum deserunt iste fugit praesentium nemo ad
+                      quidem suscipit maxime est harum, cupiditate debitis vero
+                      officiis illo, architecto quia molestiae aliquam?sd
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eventsHistory">
+          <h3>Events History</h3>
+          <div class="eventsHistoryWrap">
+            <div class="search">
+              <div class="historySearch">
+                <input type="text" placeholder="Search..." />
+                <i class="fas fa-search search-icon"></i>
+              </div>
+              <div class="historySelect">
+                <div class="select">
+                  <button>Date</button>
+                  <i class="fas fa-chevron-down downArrow"></i>
+                </div>
+                <div class="select">
+                  <button>Status</button>
+                  <i class="fas fa-chevron-down downArrow"></i>
+                </div>
+                <div class="select">
+                  <button>Name</button>
+                  <i class="fas fa-chevron-down downArrow"></i>
+                </div>
+              </div>
+              <p>Displaying 100 results</p>
+            </div>
+            <div class="sort">
+              <label for="sort">Sort:</label>
+              <select name="recent" id="recent">
+                <option value="" disabled selected>Most Recent</option>
+              </select>
+              <button class="vertical-dots">&#8942;</button>
+              <div class="export">
+                <i class="fas fa-download"></i>
+                <button class="export">Export</button>
+              </div>
+            </div>
+          </div>
+          <div class="eventName">
+            <table>
+              <thead>
+                <tr class="TR">
+                  <th class="Eventname">
+                    <span>Event Name</span> <span class="sta">Status</span>
+                  </th>
+                  <th class="DS">Date</th>
+                  <th class="DS">Speaker</th>
+                  <th class="Statuses">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="event-row">
+                  <td class="toggleEventName">
+                    <div class="nameEvent">
+                      <span class="arrowToggle">></span> Cloud Innovation Summit
+                    </div>
+                  </td>
+                  <td class="DN">2024-11-01</td>
+                  <td class="DN">Dr Peter Smith</td>
+                  <td class="toggleEventStatus in-progress">
+                    <div class="dot"></div>
+                    In-Progress
+                  </td>
+                </tr>
+                <tr class="extra-details">
+                  <td colspan="4">
+                    <div class="details-container">
+                      <span> Jane Doe</span>
+                      <span> 2024-10-22</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr></tr>
+                <tr class="event-row">
+                  <td class="toggleEventName">
+                    <div class="nameEvent">
+                      <span class="arrowToggle">></span> Blockchain Revolution Conference
+                    </div>
+                  </td>
+                  <td class="DN">2024-10-15</td>
+                  <td class="DN">Cr Aisha Malik</td>
+                  <td class="toggleEventStatus confirmed">
+                    <div class="dot"></div>
+                    Confirmed
+                  </td>
+                </tr>
+                <tr class="extra-details">
+                  <td colspan="4">
+                    <div class="details-container">
+                      <span> Jane Doe</span>
+                      <span> 2024-10-22</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr></tr>
+                <tr class="event-row">
+                  <td class="toggleEventName">
+                    <div class="nameEvent">
+                      <span class="arrowToggle">></span> AI in Healthcare Symposium
+                    </div>
+                  </td>
+                  <td class="DN">2024-10-22</td>
+                  <td class="DN">Jane Doe</td>
+                  <td class="toggleEventStatus confirmed">
+                    <div class="dot"></div>
+                    Confirmed
+                  </td>
+                </tr>
+                <tr class="extra-details">
+                  <td colspan="4">
+                    <div class="details-container">
+                      <span> Jane Doe</span>
+                      <span> 2024-10-22</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr></tr>
+                <tr class="event-row">
+                  <td class="toggleEventName">
+                    <div class="nameEvent">
+                      <span class="arrowToggle">></span> Future of Fintech Forum
+                    </div>
+                  </td>
+                  <td class="DN">2024-11-01</td>
+                  <td class="DN">Dr Peter Smith</td>
+                  <td class="toggleEventStatus in-progress">
+                    <div class="dot"></div>
+                    In Progress
+                  </td>
+                </tr>
+                <tr class="extra-details">
+                  <td colspan="4">
+                    <div class="details-container">
+                      <span> Jane Doe</span>
+                      <span> 2024-10-22</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr></tr>
+                <tr class="event-row">
+                  <td class="toggleEventName">
+                    <div class="nameEvent">
+                      <span class="arrowToggle">></span> Data Analytics in Business
+                    </div>
+                  </td>
+                  <td class="DN">2024-10-15</td>
+                  <td class="DN">Cr Aisha Malik</td>
+                  <td class="toggleEventStatus confirmed">
+                    <div class="dot"></div>
+                    Confirmed
+                  </td>
+                </tr>
+                <tr class="extra-details">
+                  <td colspan="4">
+                    <div class="details-container">
+                      <span>Speaker: Jane Doe</span>
+                      <span>Date: 2024-10-22</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr></tr>
+                <tr class="event-row">
+                  <td class="toggleEventName">
+                    <div class="nameEvent">
+                      <span class="arrowToggle">></span> Sustainable Energy Expo
+                    </div>
+                  </td>
+                  <td class="DN">2024-10-22</td>
+                  <td class="DN">Jane Doe</td>
+                  <td class="toggleEventStatus in-progress">
+                    <div class="dot"></div>
+                    In Progress
+                  </td>
+                </tr>
+                <tr class="extra-details">
+                  <td colspan="4">
+                    <div class="details-container">
+                      <span> Jane Doe</span>
+                      <span> 2024-10-22</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr></tr>
+                <tr class="event-row">
+                  <td class="toggleEventName">
+                    <div class="nameEvent">
+                      <span class="arrowToggle">></span> Web3 Interfaces Workshop
+                    </div>
+                  </td>
+                  <td class="DN">2024-11-01</td>
+                  <td class="DN">Dr Peter Smith</td>
+                  <td class="toggleEventStatus in-progress">
+                    <div class="dot"></div>
+                    In Progress
+                  </td>
+                </tr>
+                <tr class="extra-details">
+                  <td colspan="4">
+                    <div class="details-container">
+                      <span> Jane Doe</span>
+                      <span> 2024-10-22</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="moreOption">
+            <div class="nextMove">
+              <button class="but"><</button>
+              <div class="numberCircle">1</div>
+              <div class="numberCircle">2</div>
+              <div class="numberCircle">3</div>
+              <button class="but">></button>
+            </div>
+            <div class="displayRow">
+              <label for="sort">Show:</label>
+              <select name="10 rows" id="10 rows">
+                <option value="" disabled selected>10 Rows</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./ProjectTest/Script/app.js"></script>
+  </body>
+</html>
