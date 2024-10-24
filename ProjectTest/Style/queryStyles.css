@@ -34,10 +34,10 @@
     --eventBorder: #e2e8f0;
     --arrowBut-color: #e2e8f0;
     --notify-color: rgb(208, 219, 221);
-    --boxshadow-color: rgba(0, 0, 0, 0.75);
-    --eventWrap-color: rgb(14, 12, 12);
+    --boxshadow-color: #1c1c1e;
+    --eventWrap-color: #1c1c1e;
     --image-color: #ffffff;
-    --eventhistory: rgb(14, 12, 12);
+    --eventhistory: #1c1c1e;
   }
 
   * {
@@ -90,13 +90,12 @@
 
   .BarMenu .sideBarMenu {
     height: 190vh;
-
   }
 
   .sideBarMenu li a .text {
     color: var(--eventhistory);
   }
-  
+
   .userSidebar .userNorms span {
     color: var(--eventhistory);
   }
@@ -191,7 +190,7 @@
   }
 
   .eventsHistory {
-    height: 80vh;
+    height: 180vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -265,22 +264,23 @@
     align-items: center;
     color: var(--text-color);
   }
-  
+
   .sort {
     flex-wrap: wrap;
     width: 100%;
     display: flex;
     gap: 74.5%;
   }
-  .sort .vertical-dots, .sort label {
+  .sort .vertical-dots,
+  .sort label {
     color: var(--text-color);
   }
-  
+
   .sort .export {
     margin-left: 10px;
     color: var(--text-color);
   }
-  
+
   .sort select {
     color: var(--text-color);
     margin-bottom: 10px;
@@ -345,20 +345,21 @@
     display: flex;
     justify-content: space-between;
   }
-  
+
   .Eventname span {
     color: var(--text-color);
   }
-  
+
   .sta {
     display: flex;
   }
-  
+
   .toggleEventName {
     color: var(--text-color);
   }
-  
-  .toggleEventName .nameEvent, .toggleEventName .arrowToggle {
+
+  .toggleEventName .nameEvent,
+  .toggleEventName .arrowToggle {
     color: var(--text-color);
   }
 
@@ -379,7 +380,7 @@
   .extra-details {
     display: none;
   }
-  
+
   .details-container {
     width: 100%;
     display: flex;
@@ -398,11 +399,11 @@
     transform: rotate(0deg);
     transition: transform 0.3s ease;
   }
-  
+
   .event-row.active .arrowToggle {
     transform: rotate(90deg);
   }
-  
+
   .event-row.active + .extra-details {
     display: flex;
     background-color: var(--primary-dark-color);
@@ -447,5 +448,28 @@
 
   .displayRow select option {
     color: var(--eventhistory);
+  }
+
+  .downHeader {
+    width: 96%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .homeDownHeader,
+  .eventsDownHeader,
+  .speakersDownHeader,
+  .reportsDownHeader,
+  .profileDownHeader {
+    padding: 25px;
+    border:1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
   }
 }

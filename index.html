@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Overview</title>
     <link rel="stylesheet" href="./ProjectTest/Style/styles.css" />
     <link rel="stylesheet" href="./ProjectTest/Style/queryStyles.css" />
     <link
@@ -23,61 +23,61 @@
         <div class="BarMenu">
           <ul class="sideBarMenu">
             <li>
-              <a id="home-link">
+              <a class="content active" data-content="home">
                 <i class="fas fa-home"></i>
                 <span class="text">Home</span>
-              </a>
+              </a>              
             </li>
             <li>
-              <a>
+              <a data-content="events" class="content">
                 <i class="fas fa-calendar-alt"></i>
                 <span class="text">Events</span>
               </a>
             </li>
             <li>
-              <a>
+              <a id="speakers-link" data-content="speakers" class="content">
                 <i class="fas fa-microphone"></i>
                 <span class="text">Speakers</span>
               </a>
             </li>
             <li class="light-mode">
-              <a>
+              <a id="reports-link" data-content="reports" class="content">
                 <i class="fas fa-file-alt"></i>
                 <span class="text">Reports</span>
               </a>
             </li>
             <li>
-              <a>
+              <a id="notifications-link" data-content="notifications" class="content">
                 <i class="fas fa-bell"></i>
                 <span class="text">Notifications</span>
               </a>
             </li>
             <li class="light-mode">
-              <a>
+              <a id="messages-link" data-content="messages" class="content">
                 <i class="fas fa-envelope"></i>
                 <span class="text">Messages</span>
               </a>
             </li>
             <li>
-              <a>
+              <a id="settings-link" data-content="settings" class="content">
                 <i class="fas fa-cog"></i>
                 <span class="text">Settings</span>
               </a>
             </li>
             <li>
-              <a id="collapseBtn">
+              <a id="collapseBtn" data-content="collapse" class="content">
                 <i class="fas fa-chevron-left"></i>
                 <span class="text">Collapse</span>
               </a>
             </li>
-            <li id="theme-switch">
-              <a class="dark">
+            <li id="theme-switch" class="darkmode">
+              <div class="darkmode" id="darkmode">
                 <i class="fas fa-adjust"></i>
                 <span class="text">Dark Mode</span>
-              </a>
+              </div>
             </li>
             <div>
-              <div class="userSidebar">
+              <div class="userSidebar" data-content="user" class="content">
                 <div class="userIcon">
                   <i class="fas fa-user usericons"></i>
                 </div>
@@ -91,6 +91,15 @@
         </div>
       </div>
       <div class="mainContent light-mode" id="mainContent">
+        <div id="mainContent">
+          <div id="home" class="content"></div>
+          <div id="events" class="content">Here are the events...</div>
+          <div id="speakers" class="content">Meet our speakers...</div>
+          <div id="reports" class="content">Reports will be shown here...</div>
+          <div id="notifications" class="content">You have notifications...</div>
+          <div id="messages" class="content">Your messages...</div>
+          <div id="settings" class="content">Settings go here...</div>
+        </div>
         <div class="sideBarHeader">
           <div class="SideBarLogoQuery">
             <span>Full Logo</span>
@@ -432,6 +441,28 @@
               </select>
             </div>
           </div>
+        </div>
+        <div class="downHeader">
+            <div class="homeDownHeader">
+              <i class="fas fa-home"></i>
+                <p class="text">Home</p>
+            </div>
+            <div class="eventsDownHeader">
+              <i class="fas fa-calendar-alt"></i>
+                <p class="text">Events</p>
+            </div>
+            <div class="speakersDownHeader">
+              <i class="fas fa-microphone"></i>
+                <p class="text">Speakers</p>
+            </div>
+            <div class="reportsDownHeader">
+              <i class="fas fa-file-alt"></i>
+                <p class="text">Reports</p>
+              </div>
+            <div class="profileDownHeader">
+              <i class="fas fa-user usericons"></i>
+              <p class="text">Profile</p>
+            </div>
         </div>
       </div>
     </div>
