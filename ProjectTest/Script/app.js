@@ -25,20 +25,18 @@ collapseBtn.addEventListener('click', () => {
       text.style.display = 'none'; // Hide sidebar menu text
     });
     userNormsText.forEach(text => {
-      text.style.display = 'none'; // Hide userNorms text
+      text.style.display = 'none'; 
     });
   } else {
-    // Expand the sidebar
     Sidebar.style.width = '250px';
     sidebarText.forEach(text => {
-      text.style.display = 'inline-block'; // Show sidebar menu text
+      text.style.display = 'inline-block'; 
     });
     userNormsText.forEach(text => {
-      text.style.display = 'inline-block'; // Show userNorms text
+      text.style.display = 'inline-block'; 
     });
   }
   
-  // Toggle the collapse state
   isCollapsed = !isCollapsed;
 });
 
@@ -160,18 +158,14 @@ themeSwitch.addEventListener("click", () => {
 
 const navLinks = document.querySelectorAll('#sidebar li');
 
-// Loop through each link and add a click event
 navLinks.forEach(link => {
   link.addEventListener('click', function () {
-    // Remove the active class from all links
     navLinks.forEach(nav => nav.classList.remove('active'));
     
-    // Add the active class to the clicked link
     this.classList.add('active');
   });
 });
 
-// Sidebar menu toggling
 hamburgerMenu.addEventListener("click", () => {
   sideBar.classList.add("active");
 });
@@ -179,20 +173,6 @@ hamburgerMenu.addEventListener("click", () => {
 closeSideBar.addEventListener("click", () => {
   sideBar.classList.remove("active");
 });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   const mainContent = document.getElementById('mainContent');
-//   const homeLink = document.getElementById('home-link');
-
-//   if (mainContent) {
-//     // Set the active class for the home link
-//     if (homeLink) {
-//       homeLink.classList.add('active');
-//     }
-//   } else {
-//     console.error("Element with ID 'mainContent' not found");
-//   }
-// });
 
 document.addEventListener('DOMContentLoaded', function() {
   const navLinks = document.querySelectorAll('.sideBarMenu a');

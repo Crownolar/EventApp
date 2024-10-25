@@ -18,9 +18,11 @@
   --eventBackground: #484554;
   --rowColor: #484554;
   --darkmode: #f1f5f9;
+  --search-color: #484554;
 }
 
 .darkmode {
+  --search-color: #FFFFFF;
   --rowColor: none;
   --base-color: #FFFFFF;
   --text-color: #334155;
@@ -51,7 +53,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--text-color);
+  /* color: var(--text-color); */
 }
 
 body {
@@ -76,6 +78,7 @@ body {
 .SideBar {
   width: 250px;
   background-color: var(--primary-dark-color);
+  color: var(--text-color);
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -239,6 +242,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: var(--text-color);
 }
 
 .totalSummary {
@@ -295,10 +299,10 @@ body {
 .chartCarousel {
   width: 100%;
   height: 60vh;
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  color: var(--text-color);
   gap: 10px;
 }
 
@@ -403,18 +407,19 @@ body {
 
 .eventsHistory {
   height: 120vh;
-  width: 94.6%;
-  margin-top: 30px;
+  width: 100%;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
+  color: var(--text-color);
 }
 
 .eventsHistoryWrap {
-  background-color: var(--primary-dark-color);
   display: flex;
 }
 
 .search {
+  background-color: var(--search-color);
   width: 65%;
   height: 6vh;
   display: flex;
@@ -425,6 +430,7 @@ body {
 .historySearch {
   height: 100%;
   width: 30%;
+  color: var(--text-color);
 }
 
 .historySearch input {
@@ -432,6 +438,7 @@ body {
   height: 100%;
   border:1px solid var(--eventBorder);
   background-color: var(--eventBackground);
+  color: var(--text-color);
   position: relative;
   font-size: 18px;
   padding-left: 50px;
@@ -439,7 +446,6 @@ body {
 }
 
 .historySelect {
-  /* width: 40%; */
   height: 100%;
   display: flex;
   gap: 5px;
@@ -458,6 +464,7 @@ body {
 }
 
 .historySelect .select button {
+  color: var(--text-color);
   border: none;
   background-color: var(--eventBorder);
 }
@@ -465,6 +472,7 @@ body {
 .sort select {
   padding: 10px;
   background-color: var(--eventBorder);
+  color: var(--text-color);
   border: none;
 }
 
@@ -473,8 +481,8 @@ body {
 }
 
 .search-icon {
-  font-size: 18px; /* Set the icon color */
-  margin-right: 10px; /* Add space to the right if needed */
+  font-size: 18px;
+  margin-right: 10px; 
   vertical-align: middle;
   cursor: pointer;
   position: absolute;
@@ -496,6 +504,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--eventBorder);
+  color: var(--text-color);
   border: none;
 }
 
@@ -505,12 +514,14 @@ body {
   padding-block: 4px;
   cursor: pointer;
   background-color: var(--eventBorder);
+  color: var(--text-color);
   border: none;
 }
 
 .sort .export {
   cursor: pointer;
   background-color: var(--eventBorder);
+  color: var(--text-color);
   border: none;
   padding-inline: 10px;
   padding-block: 5.5px;
@@ -527,7 +538,7 @@ body {
 table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 7px; /* Collapse borders to avoid extra spacing */
+  border-spacing: 7px; 
 }
 
 .eventName table thead .TR {
@@ -554,7 +565,6 @@ table td span {
 
 table th {
   background-color: var(--thead-color);
-  /* border-collapse: collapse; */
   border-spacing: 0;
 }
 
@@ -668,10 +678,10 @@ table .toggleEventStatus {
 }
 
 .displayRow select {
-  /* width: 100%; */
   height: 100%;
   border: none;
   background-color: var(--rowColor);
+  color: var(--text-color);
   border: 1px solid var(--eventBorder);
 }
 

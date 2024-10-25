@@ -44,7 +44,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #cbd5e1;
   }
 
   .sideBarLogoWrap {
@@ -80,12 +79,10 @@
   }
 
   .SideBar {
-    /* max-width: 100%; */
     width: 100%;
     position: absolute;
     left: -750px;
     transition: width 0.3s;
-    /* margin: 10px; */
   }
 
   .BarMenu .sideBarMenu {
@@ -116,6 +113,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  #collapseBtn {
+    display: none;
   }
 
   .mainContent {
@@ -190,7 +191,7 @@
   }
 
   .eventsHistory {
-    height: 180vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -201,14 +202,15 @@
   }
 
   .eventsHistoryWrap {
-    height: 100%;
+    height: 60%;
     display: flex;
     flex-direction: column;
+    background-color: var(--base-color);
   }
 
   .search {
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
   }
@@ -266,11 +268,12 @@
   }
 
   .sort {
-    flex-wrap: wrap;
     width: 100%;
     display: flex;
-    gap: 74.5%;
+    flex-wrap: wrap;
+    gap: 65%;
   }
+
   .sort .vertical-dots,
   .sort label {
     color: var(--text-color);
@@ -295,7 +298,6 @@
   table {
     width: 100%;
     border-spacing: none;
-    /* background-color: purple; */
   }
 
   table th {
@@ -413,12 +415,12 @@
   }
 
   .moreOption {
-    height: 100%;
-    /* padding: 20px; */
+    height: 10%;
     width: 100%;
-    margin-bottom: 10vh;
+    background-color: red;
+    color: var(--text-color);
   }
-
+  
   .moreOption .nextMove {
     padding: 10px;
     display: flex;
@@ -430,32 +432,32 @@
     height: 7.5vh;
     padding-inline: 20px;
     background-color: var(--arrowBut-color);
-    color: var(--text-color);
   }
-
+  
   .displayRow {
-    width: 40%;
+    color: var(--text-color);
+    width: 45%;
   }
-
+  
   .displayRow label {
     display: none;
   }
-
+  
   .displayRow select {
-    width: 100%;
     height: 8vh;
+    padding-inline: 10px;
   }
-
-  .displayRow select option {
-    color: var(--eventhistory);
-  }
-
+  
   .downHeader {
-    width: 96%;
-    height: 15vh;
+    width: 100%;
+    height: max-content;
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: space-between;
+    background-color: var(--base-color);
+    flex-wrap: wrap;
+    gap: 2px;
+    padding-bottom: 20px;
+    color: var(--text-color);
   }
 
   .homeDownHeader,
@@ -463,13 +465,25 @@
   .speakersDownHeader,
   .reportsDownHeader,
   .profileDownHeader {
-    padding: 25px;
-    border:1px solid blue;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer; 
+  }
+
+  .homeDownHeader:hover,
+  .eventsDownHeader:hover,
+  .speakersDownHeader:hover,
+  .reportsDownHeader:hover,
+  .profileDownHeader:hover {
+    border-top: 3px solid blue;
+    color: blue;
+    text-decoration-color: blue;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 }
