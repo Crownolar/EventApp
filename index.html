@@ -6,6 +6,7 @@
     <title>Overview</title>
     <link rel="stylesheet" href="./ProjectTest/Style/styles.css" />
     <link rel="stylesheet" href="./ProjectTest/Style/queryStyles.css" />
+    <link rel="stylesheet" href="./ProjectTest/Style/MQ2.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -65,13 +66,13 @@
               </a>
             </li>
             <li>
-              <a id="collapseBtn">
+              <div id="collapseBtn">
                 <i class="fas fa-chevron-left"></i>
                 <span class="text">Collapse</span>
-              </a>
+              </div>
             </li>
-            <li id="theme-switch" class="darkmode">
-              <div class="darkmode" id="darkmode">
+            <li id="theme-switch" class="darkMode">
+              <div id="darkmode">
                 <i class="fas fa-adjust"></i>
                 <span class="text">Dark Mode</span>
               </div>
@@ -99,6 +100,7 @@
           <div id="notifications" class="content">You have notifications...</div>
           <div id="messages" class="content">Your messages...</div>
           <div id="settings" class="content">Settings go here...</div>
+          <div id="profile" class="content">Profile in here...</div>
         </div>
         <div class="sideBarHeader">
           <div class="SideBarLogoQuery">
@@ -442,23 +444,23 @@
             </div>
           </div>
           <div class="downHeader">
-              <div class="homeDownHeader">
+              <div class="homeDownHeader active" data-content="home">
                 <i class="fas fa-home"></i>
                   <p class="text">Home</p>
               </div>
-              <div class="eventsDownHeader">
+              <div class="eventsDownHeader" data-content="events">
                 <i class="fas fa-calendar-alt"></i>
                   <p class="text">Events</p>
               </div>
-              <div class="speakersDownHeader">
+              <div class="speakersDownHeader" data-content="speakers">
                 <i class="fas fa-microphone"></i>
                   <p class="text">Speakers</p>
               </div>
-              <div class="reportsDownHeader">
+              <div class="reportsDownHeader" data-content="reports">
                 <i class="fas fa-file-alt"></i>
                   <p class="text">Reports</p>
                 </div>
-              <div class="profileDownHeader">
+              <div class="profileDownHeader" data-content="reports">
                 <i class="fas fa-user usericons"></i>
                 <p class="text">Profile</p>
               </div>

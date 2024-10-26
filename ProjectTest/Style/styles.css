@@ -136,9 +136,14 @@ body {
   margin-bottom: 10px;
 }
 
-.sideBarMenu li:hover, .sideBarMenu .darkmode:hover {
+.sideBarMenu li:hover {
   background-color: var(--primary-color);
-  color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.sideBarMenu .darkMode:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .sideBarMenu li a,

@@ -234,5 +234,57 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const downHeaderLinks = document.querySelectorAll('.downHeader div');
+  const contents = document.querySelectorAll('.content');
+  const summaryPart = document.querySelector('.summaryPart');
+  const chartCarousel = document.querySelector('.chartCarousel');
+  const eventsHistoryH3 = document.querySelector('.eventsHistory h3');
+  const eventsHistoryWrap = document.querySelector('.eventsHistoryWrap');
+  const eventName = document.querySelector('.eventName');
+  const moreOption = document.querySelector('.moreOption');
+  
+  // Function to update content based on link clicked
+  const updateDownHeaderContent = (contentId) => {
+    contents.forEach(content => {
+      content.classList.remove('active');
+    });
+
+    if (contentId === 'home') {
+      summaryPart.style.display = 'block';
+      chartCarousel.style.display = 'block';
+      eventsHistoryH3.style.display = 'block';
+      eventsHistoryWrap.style.display = 'block';
+      eventName.style.display = 'block';
+      moreOption.style.display = 'flex';
+    } else {
+      summaryPart.style.display = 'none';
+      chartCarousel.style.display = 'none';
+      eventsHistoryH3.style.display = 'none';
+      eventsHistoryWrap.style.display = 'none';
+      eventName.style.display = 'none';
+      moreOption.style.display = 'none';
+      const activeContent = document.getElementById(contentId);
+      if (activeContent) {
+        activeContent.classList.add('active');
+      }
+    }
+  };
+
+  downHeaderLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      downHeaderLinks.forEach(nav => nav.classList.remove('active'));
+      link.classList.add('active');
+
+      const contentId = link.className.replace('DownHeader', '').toLowerCase();
+      updateDownHeaderContent(contentId);
+    });
+  });
+  
+  // Initially set "Home" as active
+  document.querySelector('.homeDownHeader').classList.add('active');
+  updateDownHeaderContent('home');
+});
+
 
 

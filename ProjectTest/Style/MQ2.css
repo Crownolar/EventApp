@@ -1,0 +1,56 @@
+@media screen and (max-width: 426px) {
+  :root {
+    --base-color: #383544;
+    --text-color: #cbd5e1;
+    --primary-color: #8576ff;
+    --primary-dark-color: #484554;
+    --select-color: #cbd5e1;
+    --secondary-dark-color: #6a6676;
+    --confirm-color: rgb(32, 168, 32);
+    --confirm-color2: rgb(140, 241, 140);
+    --inProgress-color: #2563eb;
+    --inProgress-color2: rgb(109, 150, 238);
+    --thead-color: var(--secondary-dark-color);
+    --eventBorder: var(--primary-dark-color);
+    --arrowBut-color: var(--primary-dark-color);
+    --notify-color: var(--text-color);
+    --image-color: #ffffff;
+    --eventhistory: #cbd5e1;
+    --nameEvent-color: #484554;
+  }
+
+  .darkmode {
+    --base-color: #ffffff;
+    --text-color: #334155;
+    --primary-color: #fcf7ff;
+    --primary-dark-color: #ffffff;
+    --select-color: #cbd5e1;
+    --secondary-dark-color: #6a6676;
+    --confirm-color: rgb(32, 168, 32);
+    --inProgress-color: #2563eb;
+    --border-color: #f2f2f7;
+    --sidebarBorder-color: #f1f5f9;
+    --thead-color: #f1f5f9;
+    --eventBorder: #e2e8f0;
+    --arrowBut-color: #e2e8f0;
+    --notify-color: rgb(208, 219, 221);
+    --boxshadow-color: #1c1c1e;
+    --eventWrap-color: #1c1c1e;
+    --image-color: #ffffff;
+    --eventhistory: #1c1c1e;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .sort {
+    width: 100%;
+    display: flex;
+    gap: 60.5%;
+  }
+
+
+}
